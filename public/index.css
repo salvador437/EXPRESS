@@ -17,7 +17,10 @@ ul li,a{
   text-decoration: none;
   color:orangered;
 }
-
+.paginas{
+  color: cyan;
+  font-size: 2em;
+}
 a:hover{
   background-color: orangered;
   color: white;
@@ -26,7 +29,7 @@ a:hover{
 
 p::first-letter {
   color: white;
-  background-color: rgb(88, 86, 86);
+  background-color: orangered;
   border-radius: 5%;
   box-shadow: 3px 3px 0 #3f02e6;
   font-size: 200%;
