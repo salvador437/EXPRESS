@@ -21,6 +21,10 @@ app.get('/contenido', (req, res) => {
   res.send('pagina3.html');
 });
 
+app.use((req,res) => {
+  res.status(404).send("página no encontrada")
+})
+
 const PUERTO =  5500;
 
 app.listen(PUERTO, () => {
