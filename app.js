@@ -1,32 +1,31 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const path = require('path')
+const path = require("path");
 
+app.use(express.static("public"));
 
-app.use( express.static('public'));
-
-app.get('/', (req, res) => {
-    res.send('index.html');
+app.get("/", (req, res) => {
+  res.send("index.html");
 });
 
-app.get('/contenido', (req, res) => {
-  res.send('pagina1.html');
+app.get("/contenido", (req, res) => {
+  res.send("pagina1.html");
 });
 
-app.get('/contenido', (req, res) => {
-  res.send('pagina2.html');
+app.get("/contenido", (req, res) => {
+  res.send("pagina2.html");
 });
 
-app.get('/contenido', (req, res) => {
-  res.send('pagina3.html');
+app.get("/contenido", (req, res) => {
+  res.send("pagina3.html");
 });
 
-app.use((req,res) => {
-  res.status(404).send("página no encontrada")
-})
+app.use((req, res) => {
+  res.status(404).send("página no encontrada");
+});
 
-const PUERTO =  5500;
+const PUERTO = 5500;
 
 app.listen(PUERTO, () => {
   console.log(`escuchando por el puerto ${PUERTO}`);
-})
+});
